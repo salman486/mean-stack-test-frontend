@@ -1,0 +1,23 @@
+<div class="border shadow-sm p-4 rounded-lg">
+  <div class="flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <img [src]="iconUrl" alt="icon" class="w-6 h-6" />
+      <h3 class="text-lg font-semibold">{{ title }}</h3>
+    </div>
+    <button (click)="toggleExpand()">
+      <span [ngClass]="isExpanded ? 'rotate-180' : ''"> ▲ </span>
+    </button>
+  </div>
+
+  <div *ngIf="isExpanded" class="mt-4">
+    <div class="text-center">
+      <button
+        (click)="buttonAction()"
+        class="bg-blue-600 text-white px-4 py-2 rounded"
+      >
+        {{ buttonText }}
+      </button>
+    </div>
+    <p class="text-center mt-2 text-sm text-gray-500">{{ subtitle }}</p>
+  </div>
+</div>
