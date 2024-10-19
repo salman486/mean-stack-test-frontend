@@ -1,0 +1,21 @@
+<div *ngIf="userOrganizations">
+  <h1 class="mt-5 text-xl font-semibold border-b border-black inline-block">
+    User Organizations
+  </h1>
+
+  <ul class="mt-4 max-w-[1000px]">
+    @for (org of userOrganizations; track org.id) {
+    <li class="mb-4">
+      <h2 class="text-lg font-semibold text-gray-700">{{ org.login }}</h2>
+
+      <ag-grid-angular
+        [rowData]="org.repos ?? []"
+        [columnDefs]="colDefs"
+        style="width: 100%"
+        class="ag-theme-quartz mt-2"
+        [domLayout]="'autoHeight'"
+      />
+    </li>
+    }
+  </ul>
+</div>

@@ -1,0 +1,21 @@
+<div *ngIf="user">
+  <div
+    class="border shadow-sm p-4 rounded-lg flex justify-between items-center"
+  >
+    <div class="flex items-center space-x-2">
+      <img
+        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+        alt="GitHub"
+        class="w-6 h-6"
+      />
+      <span class="text-lg font-semibold">Github</span>
+    </div>
+    <div>
+      <div class="text-sm text-gray-500">
+        <span>User email: {{ user.email ?? "N/A" }}</span
+        ><br />
+        <span>User name: {{ user.name }}</span>
+      </div>
+    </div>
+  </div>
+</div>

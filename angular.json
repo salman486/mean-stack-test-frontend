@@ -24,7 +24,11 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"],
+            "styles": [
+              "src/styles.css",
+              "ag-grid-community/styles/ag-grid.css",
+              "ag-grid-community/styles/ag-theme-quartz.css"
+            ],
             "scripts": []
           },
           "configurations": {
